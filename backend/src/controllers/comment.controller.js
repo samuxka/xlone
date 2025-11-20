@@ -16,7 +16,7 @@ export const getComments = asyncHandler(async (req, res) => {
     res.status(200).json({ comments })
 })
 
-export const createComments = asyncHandler(async (req, res) => {
+export const createComment = asyncHandler(async (req, res) => {
     const { userId } = getAuth(req)
     const { postId } = req.params
     const { content } = req.body
@@ -55,7 +55,7 @@ export const createComments = asyncHandler(async (req, res) => {
     res.status(201).json({ comment })
 })
 
-export const deleteComments = asyncHandler(async (req, res) => {
+export const deleteComment = asyncHandler(async (req, res) => {
     const { userId } = getAuth(req)
     const { commentId } = req.params
 
